@@ -70,7 +70,7 @@ function servic2(){
         <div className="scroll-container">
          <div className="section "id='service1'>servic1</div>
          <div className="section" id='service2'>servic2</div>
-         <div className="section" id='service3'>servic3</div>
+         <div className="section" id='service3'>servic55</div>
          <div className="section"></div>
         </div>
       
