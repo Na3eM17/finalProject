@@ -1,22 +1,27 @@
-import { useState } from 'react'
+import React from "react";
 import './assets/component/header.css'
 import './assets/component/index.css'
 import {Service} from './cardMotion'
 import { Typewriter } from 'react-simple-typewriter';
-import user from "../public/icons/user-square.png"
-import book from "../public/icons/reading.png"
-import like from "../public/icons/like.png"
-import AI from "../public/icons/robot.png"
+import user from './assets/icons/user-square.png';
+import book from './assets/icons/reading.png';
+import like from './assets/icons/like.png';
+import AI from './assets/icons/robot.png';
 
 function App() {
-
- function servic1(){
+ function footer(){
+  window.location.hash = "#footer";
+}
+function servic1(){
   window.location.hash = "#service1";
 }
 function servic2(){
   window.location.hash = "#service2";
 }function servic3(){
   window.location.hash = "#service3";
+}
+function LogOut(){
+      window.location.href = "/";
 }
   return (
     <>
@@ -30,7 +35,7 @@ function servic2(){
               <img src={user} alt=""/>
             </div>
           </div>
-          <div className="btn">
+          <div className="btn" onClick={LogOut}>
             <button>log out</button>
           </div>
         </div>
@@ -59,10 +64,9 @@ function servic2(){
             </div>
             
               <ul>
-                <li>lol</li>
-                <li>lol</li>
-                <li>lol</li>
-                <li>lol</li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li onClick={footer}><a href="#Footer">Footer</a></li>
               </ul>
           </div>
         </div>
@@ -70,8 +74,8 @@ function servic2(){
         <div className="scroll-container">
          <div className="section "id='service1'>servic1</div>
          <div className="section" id='service2'>servic2</div>
-         <div className="section" id='service3'>servic55</div>
-         <div className="section"></div>
+         <div className="section" id='service3'>servic3</div>
+         <div className="section" id='footer'> footer </div>
         </div>
       
      </div>

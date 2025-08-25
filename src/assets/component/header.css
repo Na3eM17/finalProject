@@ -23,7 +23,12 @@
   align-items: flex-start;
   background-color: var(--primary-color);
 }
-
+.header a{
+  color: var(--text-color);
+}
+.header a:hover{
+  color:var(--logo)
+}
 .scroll-container {
   width: 65%;
   height: 100vh;
@@ -51,12 +56,15 @@
   padding: 8px 16px;
   background-color: var(--text-color);
   transition: transform 0.5s ease, background-color 0.3s ease;
+  color: var(--service-color);
   cursor: pointer;
 }
 
 .logo-btn .btn button:hover {
   background-color: var(--service-color);
   transform: translateY(-5px);
+  color: var(--text-color);
+
   border: none;
 }
 
@@ -114,7 +122,9 @@
   transform-style: preserve-3d;
   box-shadow: 0 0 10px rgba(0,0,0,0.15);
 }
-
+.service:hover{
+  background-color: var(--primary-color);
+}
 .service-image {
   width: 30px;
   height: 30px;
@@ -141,7 +151,6 @@
 .section {
   width: 100%;
   height: 100vh;
-  border: 5px solid red;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -156,7 +165,7 @@
   }
   .header {
     width: 100%;
-    height: 40%;
+    height: 60%;
   }
   .scroll-container {
     width: 100%;
@@ -169,7 +178,7 @@
     padding: 0;
   }
   .services-container{
-        flex-direction: row;
+        flex-direction: column;
   }
   .service-image{
     display: none;
@@ -207,9 +216,22 @@
   .services {
     gap: 10px;
   }
+  .container{
+    height: auto;
+  }
+  .scroll-container{
+    overflow: hidden;
+    height: auto;
+  }
+  .services-container{
+    align-items: center;
+  }
+  .services-container ul{
+    justify-content: center;
+  }
   .service {
-    width: 90px;
-    height: 120px;
+    width: 100px;
+    height: 40px;
   }
   .container{
     width: 100%;
